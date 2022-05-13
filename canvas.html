@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Canvas</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+      var canvas = document.getElementById("canvas");
+      var ctx = canvas.getContext("2d");
+      //   человечек
+      ctx.fillStyle = "Red";
+      ctx.fillRect(50, 50, 50, 50);
+      ctx.fillRect(70, 100, 10, 20);
+      ctx.fillRect(0, 120, 150, 10);
+      ctx.fillRect(50, 130, 50, 50);
+      ctx.fillRect(40, 130, 10, 100);
+      ctx.fillRect(100, 130, 10, 100);
+      //   прямоугольники
+      ctx.fillStyle = "PaleGreen";
+      ctx.fillRect(120, 0, 50, 100);
+      ctx.fillStyle = "Turquoise";
+      ctx.fillRect(170, 0, 50, 100);
+      ctx.fillStyle = "Violet";
+      ctx.fillRect(220, 0, 50, 100);
+      //   крестик
+      ctx.strokeStyle = "Turquoise";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(10, 10);
+      ctx.lineTo(60, 60);
+      ctx.moveTo(60, 10);
+      ctx.lineTo(10, 60);
+      ctx.stroke();
+      // второй человечек
+      ctx.strokeStyle = "Blue";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(170, 130);
+      ctx.lineTo(190, 130);
+      ctx.lineTo(190, 150);
+      ctx.lineTo(170, 150);
+      ctx.lineTo(170, 128);
+      ctx.moveTo(180, 150);
+      ctx.lineTo(180, 190);
+      ctx.moveTo(180, 170);
+      ctx.lineTo(155, 160);
+      ctx.moveTo(180, 170);
+      ctx.lineTo(205, 160);
+      ctx.moveTo(180, 190);
+      ctx.lineTo(160, 215);
+      ctx.moveTo(180, 190);
+      ctx.lineTo(200, 215);
+      ctx.stroke();
+      //   домик
+      ctx.fillStyle = "Green";
+      ctx.beginPath();
+      ctx.moveTo(200, 200);
+      ctx.lineTo(200, 160);
+      ctx.lineTo(230, 130);
+      ctx.lineTo(260, 160);
+      ctx.lineTo(260, 200);
+      ctx.lineTo(200, 200);
+      ctx.fill();
+    </script>
+  </body>
+</html>
